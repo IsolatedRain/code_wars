@@ -5,7 +5,7 @@ def solve(puzzle):
     rows = [set(range(1, 10)) for _ in range(9)]
     cols = [set(range(1, 10)) for _ in range(9)]
     boxes = [set(range(1, 10)) for _ in range(9)]
-    need = []
+    # need = []
     for r in range(9):
         for c in range(9):
             if puzzle[r][c]:
@@ -14,8 +14,8 @@ def solve(puzzle):
                 rows[r].discard(v)
                 cols[c].discard(v)
                 boxes[i].discard(v)
-            else:
-                need.append((r, c))
+            # else:
+                # need.append((r, c))
 
     def getMin():
         nr, nc = -1, -1
